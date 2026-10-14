@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { PELAT } from "@/lib/herbarium";
 import { ESAI } from "@/lib/catatan";
 
-const BASE = "https://absorber-divine.vercel.app";
+const BASE = "https://absorber-divine.pintuweb.id";
 
 const routes: { path: string; priority: number }[] = [
   { path: "", priority: 1 },

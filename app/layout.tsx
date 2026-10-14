@@ -39,13 +39,13 @@ const __jsonld = {
       "@type": "CreativeWork",
       name: "EthyleneAbsorber — Konsep Divine",
       description: "Landing page produk ethylene absorber, konsep desain \"Divine\".",
-      url: "https://absorber-divine.vercel.app",
+      url: "https://absorber-divine.pintuweb.id",
     },
   ],
 };
 
 export const metadata = {
-  metadataBase: new URL("https://absorber-divine.vercel.app"),
+  metadataBase: new URL("https://absorber-divine.pintuweb.id"),
   title: {
     default: "EthyleneAbsorber — Konsep Divine | Dickson Synergy",
     template: "%s — EthyleneGuard · Dickson Synergy",
@@ -56,11 +56,11 @@ export const metadata = {
   authors: [{ name: "EthyleneAbsorber" }],
   creator: "EthyleneAbsorber",
   publisher: "EthyleneAbsorber",
-  alternates: { canonical: "https://absorber-divine.vercel.app" },
+  alternates: { canonical: "https://absorber-divine.pintuweb.id" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://absorber-divine.vercel.app",
+    url: "https://absorber-divine.pintuweb.id",
     siteName: "EthyleneAbsorber",
     title: "EthyleneAbsorber — Konsep Divine | Dickson Synergy",
     description: "Landing page EthyleneAbsorber konsep \"Divine\": elegan dengan sentuhan italic, \"freshness reimagined\" untuk kesan eksklusif.",

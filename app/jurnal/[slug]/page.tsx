@@ -6,7 +6,7 @@ import PlateHero from '@/components/PlateHero';
 import { ESAI, esaiBySlug, type Blok } from '@/lib/catatan';
 import { pelatBySlug } from '@/lib/herbarium';
 
-const SITE = 'https://absorber-divine.vercel.app';
+const SITE = 'https://absorber-divine.pintuweb.id';
 
 export function generateStaticParams() {
   return ESAI.map((e) => ({ slug: e.slug }));

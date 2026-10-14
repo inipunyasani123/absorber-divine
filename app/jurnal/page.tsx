@@ -6,7 +6,7 @@ export const metadata = {
   title: 'Catatan Herbarium',
   description:
     'Esai pendek tentang buah yang terus bernapas setelah dipetik, komoditas yang berbagi ruang, dan warna indikator yang menandai waktu.',
-  alternates: { canonical: 'https://absorber-divine.vercel.app/jurnal' },
+  alternates: { canonical: 'https://absorber-divine.pintuweb.id/jurnal' },
 };
 
 export default function JurnalIndex() {

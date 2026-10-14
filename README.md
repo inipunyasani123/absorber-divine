@@ -2,7 +2,7 @@
 
 Sachet penyerap gas etilen. Satu sachet merawat ruang 1–2 m³ selama 30 hari, hingga 45 hari pada kondisi ideal.
 
-**Demo live:** https://absorber-divine.vercel.app
+**Demo live:** https://absorber-divine.pintuweb.id
 
 ![Tangkapan layar EthyleneAbsorber](public/og.jpg)
 

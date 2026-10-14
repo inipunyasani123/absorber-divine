@@ -8,7 +8,7 @@ export const metadata = {
   title: 'Herbarium Kesegaran',
   description:
     'Delapan pelat komoditas segar — pisang, apel, pir, mangga, jeruk, anggur, stroberi, dan bunga potong — dengan sifat etilen, suhu simpan, dan kapan sachet EthyleneGuard benar-benar dibutuhkan.',
-  alternates: { canonical: 'https://absorber-divine.vercel.app/herbarium' },
+  alternates: { canonical: 'https://absorber-divine.pintuweb.id/herbarium' },
 };
 
 export default function HerbariumIndex() {

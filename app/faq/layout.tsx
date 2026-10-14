@@ -2,7 +2,7 @@
 export const metadata = {
   title: 'Tanya Jawab',
   description: 'Delapan pertanyaan yang paling sering diajukan tentang EthyleneGuard: cara pakai, masa efektif, keamanan pangan, dan pengiriman ekspor.',
-  alternates: { canonical: 'https://absorber-divine.vercel.app/faq' },
+  alternates: { canonical: 'https://absorber-divine.pintuweb.id/faq' },
 };
 
 export default function FaqLayout({ children }: { children: React.ReactNode }) {

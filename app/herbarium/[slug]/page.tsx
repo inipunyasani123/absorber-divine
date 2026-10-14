@@ -6,7 +6,7 @@ import Skala from '@/components/Skala';
 import { PlateMark, Rule } from '@/components/ui';
 import { PELAT, pelatBySlug } from '@/lib/herbarium';
 
-const SITE = 'https://absorber-divine.vercel.app';
+const SITE = 'https://absorber-divine.pintuweb.id';
 
 export function generateStaticParams() {
   return PELAT.map((p) => ({ slug: p.slug }));
