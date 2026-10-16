@@ -5,8 +5,7 @@ import BungaPotong from '@/components/BungaPotong';
 import Skala from '@/components/Skala';
 import { PlateMark, Rule } from '@/components/ui';
 import { PELAT, pelatBySlug } from '@/lib/herbarium';
-
-const SITE = 'https://absorber-divine.pintuweb.id';
+import { meta } from '@/lib/seo';
 
 export function generateStaticParams() {
   return PELAT.map((p) => ({ slug: p.slug }));
@@ -16,11 +15,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const p = pelatBySlug(slug);
   if (!p) return {};
-  return {
+  return meta({
     title: `Pelat ${p.no} · ${p.nama} (${p.latin})`,
     description: `${p.nama}: ${p.klimakterik ? 'klimakterik' : 'non-klimakterik'}, melepas etilen ${p.melepas.toLowerCase()}, kepekaan ${p.peka.toLowerCase()}. ${p.alasan}`,
-    alternates: { canonical: `${SITE}/herbarium/${p.slug}` },
-  };
+    path: `/herbarium/${p.slug}`,
+  });
 }
 
 export default async function PelatPage({ params }: { params: Promise<{ slug: string }> }) {

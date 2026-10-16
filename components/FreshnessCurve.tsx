@@ -47,7 +47,7 @@ const dayMarks = [0, 7, 14, 21];
 
 export default function FreshnessCurve() {
   return (
-    <section id="kurva" className="relative overflow-hidden bg-paper-deep py-24 md:py-32">
+    <section id="kurva" className="relative overflow-hidden bg-paper-deep py-16 md:py-32">
       <div aria-hidden="true" className="laid absolute inset-0" />
 
       <div className="relative z-10 mx-auto max-w-5xl px-6">
@@ -61,7 +61,7 @@ export default function FreshnessCurve() {
             </>
           }
           lead="Dua peti berangkat pada hari yang sama. Yang satu dibiarkan bersama gasnya sendiri, yang lain ditemani sebuah sachet. Inilah jaraknya setelah tiga minggu."
-          className="mb-14"
+          className="mb-10 md:mb-14"
         />
 
         <figure className="border border-ink/15 bg-paper p-6 sm:p-10">

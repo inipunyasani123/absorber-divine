@@ -4,11 +4,13 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const saluran = [
-  { label: 'Telepon', value: '+62 812 3456 7890', href: 'tel:+628123456789', note: 'Jalur tercepat pada jam kerja' },
-  { label: 'Surel', value: 'support@ethyleneabsorber.com', href: 'mailto:support@ethyleneabsorber.com', note: 'Dibalas dalam 1–2 jam kerja' },
-  { label: 'Kantor', value: 'Jl. Teknologi No. 123, Bandung 40234', note: 'Kunjungan dengan janji temu' },
-  { label: 'Jam Kerja', value: 'Sen–Jum 08.00–17.00', note: 'Sabtu 08.00–12.00' },
+/* Yang kembali setelah formulir dikirim — tanpa nomor telepon, surel, atau
+   alamat kantor karangan; kanal resmi klien belum ada di brief. */
+const kembali = [
+  { label: 'Perhitungan tertulis', value: 'Jumlah sachet untuk ruang Anda', note: 'Dasarnya volume, bukan berat: satu sachet untuk 1–2 m³.' },
+  { label: 'Sample', value: 'Untuk diuji di tempat Anda', note: 'Bandingkan satu peti bersachet dengan satu peti tanpa perlakuan.' },
+  { label: 'Lembar data', value: 'Spesifikasi & registrasi', note: 'BPOM RI NA18191100273 beserta standar kontak pangan.' },
+  { label: 'Acuan volume', value: 'Kontainer 20 ft ± 33 m³', note: '40 ft ± 67 m³ · 40 ft HC ± 76 m³.' },
 ]
 
 export default function KontakPage() {
@@ -49,19 +51,12 @@ export default function KontakPage() {
               sendiri.
             </p>
 
-            <dl className="mt-12 grid gap-7 border-t border-paper/20 pt-8 sm:grid-cols-2">
-              {saluran.map((s) => (
+            <p className="sc mt-12 border-t border-paper/20 pt-8 text-brass-soft">Yang kembali kepada Anda</p>
+            <dl className="mt-6 grid gap-7 sm:grid-cols-2">
+              {kembali.map((s) => (
                 <div key={s.label}>
                   <dt className="sc text-paper/70">{s.label}</dt>
-                  <dd className="mt-1.5 text-sm text-paper">
-                    {s.href ? (
-                      <a href={s.href} className="break-all transition-colors hover:text-brass-soft">
-                        {s.value}
-                      </a>
-                    ) : (
-                      s.value
-                    )}
-                  </dd>
+                  <dd className="mt-1.5 font-serif text-lg leading-snug text-paper">{s.value}</dd>
                   <dd className="mt-1 text-[0.8125rem] leading-relaxed text-paper/70">{s.note}</dd>
                 </div>
               ))}
@@ -153,7 +148,7 @@ export default function KontakPage() {
             Sebagian besar pertanyaan sudah terjawab lengkap di lembar tanya jawab.
           </p>
           <Link href="/faq" className="sc mx-auto border-b border-brass/50 pb-1 text-brass-ink hover:border-brass">
-            Buka Pelat VIII
+            Buka Pelat VII
           </Link>
         </div>
       </section>

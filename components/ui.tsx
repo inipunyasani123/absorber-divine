@@ -93,13 +93,13 @@ export function Figure({
   return (
     <div>
       <div
-        className={`font-serif text-[1.75rem] leading-none ${
+        className={`font-serif text-[1.3rem] leading-none sm:text-[1.75rem] ${
           tone === 'dark' ? 'text-brass-soft' : 'text-leaf'
         }`}
       >
         {value}
       </div>
-      <div className={`sc mt-2.5 ${tone === 'dark' ? 'text-paper/70' : 'text-ink-soft'}`}>
+      <div className={`sc mt-2.5 leading-[1.5] ${tone === 'dark' ? 'text-paper/70' : 'text-ink-soft'}`}>
         {label}
       </div>
     </div>

@@ -4,12 +4,13 @@ import FreshnessCurve from '@/components/FreshnessCurve'
 import Ritual from '@/components/Ritual'
 import Specimens from '@/components/Specimens'
 import Assurance from '@/components/Assurance'
-import Testimonials from '@/components/Testimonials'
 import Closing from '@/components/Closing'
 
 /* Halaman disusun sebagai kumpulan pelat bernomor Romawi:
    I pernyataan · II anatomi pematangan · III kurva kesegaran · IV cara kerja
-   V spesimen · VI jaminan · VII catatan lapangan · VIII tanya jawab. */
+   V spesimen · VI jaminan · VII tanya jawab.
+   Pelat "catatan lapangan" (kutipan bernama + foto wajah) dihapus: kutipan
+   itu karangan, sedangkan isi konsep hanya boleh berasal dari brief. */
 export default function HomePage() {
   return (
     <>
@@ -19,7 +20,6 @@ export default function HomePage() {
       <Ritual />
       <Specimens />
       <Assurance />
-      <Testimonials />
       <Closing />
     </>
   )

@@ -11,8 +11,8 @@ export default function Ripening() {
     <section id="pematangan" className="relative overflow-hidden bg-ink text-paper">
       <div aria-hidden="true" className="laid absolute inset-0 opacity-40" />
 
-      <div className="relative z-10 mx-auto max-w-6xl px-6 py-24 md:py-32">
-        <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-20">
+      <div className="relative z-10 mx-auto max-w-6xl px-6 py-16 md:py-32">
+        <div className="grid gap-10 md:gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-20">
           <div>
             <PlateHead
               no="II"
@@ -34,7 +34,7 @@ export default function Ripening() {
               sendiri — maupun oleh gas dari peti di sebelahnya.
             </p>
 
-            <dl className="mt-12 grid gap-8 border-t border-paper/20 pt-8 sm:grid-cols-3">
+            <dl className="mt-10 grid grid-cols-3 gap-4 border-t border-paper/20 pt-7 sm:mt-12 sm:gap-8 sm:pt-8">
               {observations.map((o) => (
                 <div key={o.label}>
                   <dt className="sr-only">{o.label}</dt>
@@ -50,7 +50,7 @@ export default function Ripening() {
           <div className="flex items-center justify-center">
             <svg
               viewBox="0 0 320 380"
-              className="w-full max-w-[17rem] text-brass-soft"
+              className="w-full max-w-[9rem] text-brass-soft sm:max-w-[17rem]"
               role="img"
               aria-label="Diagram: molekul etilena dengan ikatan rangkap, dikelilingi sulur daun."
             >

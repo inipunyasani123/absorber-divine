@@ -3,13 +3,14 @@ import Link from 'next/link';
 import BungaPotong from '@/components/BungaPotong';
 import PlateHero from '@/components/PlateHero';
 import { PELAT } from '@/lib/herbarium';
+import { meta } from '@/lib/seo';
 
-export const metadata = {
+export const metadata = meta({
   title: 'Herbarium Kesegaran',
   description:
-    'Delapan pelat komoditas segar — pisang, apel, pir, mangga, jeruk, anggur, stroberi, dan bunga potong — dengan sifat etilen, suhu simpan, dan kapan sachet EthyleneGuard benar-benar dibutuhkan.',
-  alternates: { canonical: 'https://absorber-divine.pintuweb.id/herbarium' },
-};
+    'Delapan pelat komoditas segar, dari pisang sampai bunga potong: sifat etilen, suhu simpan, dan kapan sachet EthyleneGuard benar-benar dibutuhkan.',
+  path: '/herbarium',
+});
 
 export default function HerbariumIndex() {
   return (

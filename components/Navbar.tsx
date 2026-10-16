@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -16,6 +16,8 @@ const NAV = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const panelRef = useRef<HTMLDivElement>(null)
+  const tombolRef = useRef<HTMLButtonElement>(null)
   const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
 
@@ -26,23 +28,43 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  // Laci menu: kunci scroll, fokus pindah ke dalam laci dan berputar di
+  // dalamnya (Tab / Shift+Tab), Escape menutup, lalu fokus kembali ke tombol menu.
   useEffect(() => {
     if (!open) return
-    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false)
+    const tombol = tombolRef.current
+    const fokusan = () =>
+      Array.from(panelRef.current?.querySelectorAll<HTMLElement>('a[href], button') ?? [])
+    const t = window.setTimeout(() => fokusan()[0]?.focus(), 30)
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') return setOpen(false)
+      if (e.key !== 'Tab') return
+      const el = fokusan()
+      if (!el.length) return
+      const awal = el[0], akhir = el[el.length - 1]
+      if (e.shiftKey && document.activeElement === awal) { e.preventDefault(); akhir.focus() }
+      else if (!e.shiftKey && document.activeElement === akhir) { e.preventDefault(); awal.focus() }
+    }
     document.addEventListener('keydown', onKey)
     document.body.style.overflow = 'hidden'
     return () => {
+      window.clearTimeout(t)
       document.removeEventListener('keydown', onKey)
       document.body.style.overflow = ''
+      tombol?.focus()
     }
   }, [open])
 
   useEffect(() => setOpen(false), [pathname])
 
+  // /kontak dan /faq berkepala hijau pekat: bilah transparan membuat logo &
+  // tautan berwarna tinta tenggelam, jadi di sana bilah selalu berlatar kertas.
+  const solid = scrolled || pathname === '/kontak' || pathname === '/faq'
+
   return (
     <header
       className={`fixed top-0 z-50 w-full transition-colors duration-300 ${
-        scrolled ? 'bg-paper/92 backdrop-blur-md' : 'bg-transparent'
+        solid ? 'bg-paper/92 backdrop-blur-md' : 'bg-transparent'
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
@@ -57,7 +79,7 @@ export default function Navbar() {
               key={n.href}
               href={n.href}
               aria-current={!n.href.startsWith('/#') && pathname.startsWith(n.href) ? 'page' : undefined}
-              className={`sc transition-colors hover:text-brass ${!n.href.startsWith('/#') && pathname.startsWith(n.href) ? 'text-leaf' : 'text-ink-soft'}`}
+              className={`sc transition-colors hover:text-brass ${!n.href.startsWith('/#') && pathname.startsWith(n.href) ? 'text-brass-ink' : 'text-ink-soft'}`}
             >
               {n.label}
             </Link>
@@ -71,6 +93,7 @@ export default function Navbar() {
         </nav>
 
         <button
+          ref={tombolRef}
           className="-mr-2 p-2 text-ink lg:hidden"
           onClick={() => setOpen(true)}
           aria-label="Buka menu"
@@ -84,7 +107,7 @@ export default function Navbar() {
       <div
         aria-hidden="true"
         className={`rule-double mx-auto max-w-6xl text-ink transition-opacity duration-300 ${
-          scrolled ? 'opacity-100' : 'opacity-0'
+          solid ? 'opacity-100' : 'opacity-0'
         }`}
       />
 
@@ -99,6 +122,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
             />
             <motion.div
+              ref={panelRef}
               className="fixed top-0 right-0 z-50 flex h-full w-[86%] max-w-sm flex-col bg-paper lg:hidden"
               initial={{ x: '100%' }}
               animate={{ x: 0 }}

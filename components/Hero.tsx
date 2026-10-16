@@ -10,7 +10,7 @@ const figures = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-paper pt-32 pb-20 md:pt-40 md:pb-28">
+    <section className="relative overflow-hidden bg-paper pt-28 pb-14 md:pt-40 md:pb-28">
       <div aria-hidden="true" className="laid absolute inset-0" />
 
       {/* Sepasang sulur tipis di latar — ornamen pelat, bukan gambar */}
@@ -29,7 +29,7 @@ export default function Hero() {
         <circle cx="200" cy="120" r="30" stroke="currentColor" strokeWidth="1.5" />
       </svg>
 
-      <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-16 px-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-20">
+      <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-12 px-6 md:gap-16 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-20">
         {/* ------------------------------------------------------------------ */}
         {/* Pernyataan                                                          */}
         {/* ------------------------------------------------------------------ */}
@@ -65,7 +65,7 @@ export default function Hero() {
             </Link>
           </div>
 
-          <dl className="mt-14 grid gap-8 border-t border-ink/12 pt-8 sm:grid-cols-3">
+          <dl className="mt-10 grid grid-cols-3 gap-4 border-t border-ink/12 pt-7 sm:mt-14 sm:gap-8 sm:pt-8">
             {figures.map((f) => (
               <div key={f.label}>
                 <dt className="sr-only">{f.label}</dt>
@@ -80,7 +80,7 @@ export default function Hero() {
         {/* ------------------------------------------------------------------ */}
         {/* Pelat spesimen                                                      */}
         {/* ------------------------------------------------------------------ */}
-        <figure className="relative mx-auto w-full max-w-sm lg:mx-0 lg:max-w-none">
+        <figure className="relative mx-auto w-full max-w-[17rem] sm:max-w-sm lg:mx-0 lg:max-w-none">
           {/* Bingkai berpuncak lengkung */}
           <div className="arch relative overflow-hidden border border-ink/15 bg-paper-deep p-3">
             <div className="arch-sm relative aspect-[4/5] overflow-hidden bg-paper">
@@ -89,14 +89,14 @@ export default function Hero() {
                 alt="Sachet EthyleneGuard di antara buah segar"
                 fill
                 priority
-                sizes="(min-width: 1024px) 42vw, 100vw"
+                sizes="(min-width: 1024px) 42vw, 384px"
                 className="object-cover"
               />
             </div>
           </div>
 
           {/* Keterangan pelat, gaya kartu herbarium */}
-          <figcaption className="mx-auto mt-6 max-w-xs border border-ink/12 bg-paper px-6 py-5 text-center">
+          <figcaption className="mx-auto mt-5 max-w-xs border border-ink/12 bg-paper px-6 py-5 text-center">
             <p className="sc text-brass-ink">Spesimen I</p>
             <p className="mt-2 font-serif text-lg text-ink italic">Sachet dalam kemasan</p>
             <p className="mt-2 text-sm leading-relaxed text-ink-soft">

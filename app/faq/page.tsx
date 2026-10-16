@@ -47,7 +47,7 @@ export default function FaqPage() {
       <header className="relative overflow-hidden bg-ink text-paper">
         <div aria-hidden="true" className="laid absolute inset-0 opacity-40" />
         <div className="relative z-10 mx-auto max-w-3xl px-6 pt-36 pb-20 text-center md:pt-44 md:pb-24">
-          <p className="sc tendril mb-7 inline-block text-brass-soft">Pelat VIII</p>
+          <p className="sc tendril mb-7 inline-block text-brass-soft">Pelat VII</p>
           <h1 className="font-serif text-[2.3rem] leading-[1.08] text-paper md:text-[3rem]">
             Delapan pertanyaan,
             <br />

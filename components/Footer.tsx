@@ -26,8 +26,8 @@ export default function Footer() {
     <footer className="relative overflow-hidden bg-ink text-paper/70">
       <div aria-hidden="true" className="laid absolute inset-0 opacity-40" />
 
-      <div className="relative z-10 mx-auto max-w-6xl px-6 pt-20 pb-10">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)_minmax(0,0.8fr)_minmax(0,1fr)]">
+      <div className="relative z-10 mx-auto max-w-6xl px-6 pt-16 pb-10 md:pt-20">
+        <div className="grid gap-10 md:grid-cols-2 md:gap-12 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)_minmax(0,0.8fr)_minmax(0,1fr)]">
           <div>
             <p className="flex items-baseline gap-2.5">
               <span className="font-serif text-xl text-paper italic">Ethylene</span>
@@ -45,7 +45,7 @@ export default function Footer() {
 
           <nav aria-label="Navigasi footer">
             <h2 className="sc mb-5 border-b border-paper/20 pb-3 text-paper">Pelat</h2>
-            <ul className="space-y-3">
+            <ul className="grid grid-cols-2 gap-x-6 gap-y-3 sm:block sm:space-y-3">
               {plates.map((p) => (
                 <li key={p.href}>
                   <Link href={p.href} className="text-sm transition-colors hover:text-brass-soft">
@@ -58,7 +58,7 @@ export default function Footer() {
 
           <div>
             <h2 className="sc mb-5 border-b border-paper/20 pb-3 text-paper">Standar</h2>
-            <dl className="space-y-3.5">
+            <dl className="grid grid-cols-2 gap-x-6 gap-y-3.5 sm:block sm:space-y-3.5">
               {standards.map(([k, v]) => (
                 <div key={k}>
                   <dt className="text-sm text-paper/75">{k}</dt>
@@ -69,32 +69,21 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="sc mb-5 border-b border-paper/20 pb-3 text-paper">Hubungi</h2>
-            <ul className="space-y-4 text-sm">
-              <li>
-                <span className="sc block text-paper/70">Telepon</span>
-                <a href="tel:+628123456789" className="transition-colors hover:text-brass-soft">
-                  +62 812 3456 7890
-                </a>
-              </li>
-              <li>
-                <span className="sc block text-paper/70">Surel</span>
-                <a
-                  href="mailto:support@ethyleneabsorber.com"
-                  className="break-all transition-colors hover:text-brass-soft"
-                >
-                  support@ethyleneabsorber.com
-                </a>
-              </li>
-              <li>
-                <span className="sc block text-paper/70">Alamat</span>
-                <span className="leading-relaxed">Jl. Teknologi No. 123, Bandung 40234</span>
-              </li>
-            </ul>
+            <h2 className="sc mb-5 border-b border-paper/20 pb-3 text-paper">Permintaan</h2>
+            <p className="max-w-xs text-sm leading-relaxed text-paper/75">
+              Sample dan perhitungan kebutuhan sachet diminta lewat satu lembar formulir: komoditas,
+              volume ruang, dan rute pengiriman.
+            </p>
+            <Link
+              href="/kontak"
+              className="sc mt-6 inline-block border-b border-brass-soft/60 pb-1 text-brass-soft transition-colors hover:border-brass-soft"
+            >
+              Isi lembar permintaan
+            </Link>
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-4 border-t border-paper/15 pt-7 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-4 border-t border-paper/15 pt-7 md:mt-16 sm:flex-row sm:items-center sm:justify-between">
           <p className="sc text-paper/70">© {tahun} EthyleneGuard · PT Dickson Synergy</p>
           <p className="sc flex flex-wrap gap-x-5 gap-y-2 text-paper/70">
             <Link href="/privacy" className="hover:text-brass-soft">Kebijakan Privasi</Link>

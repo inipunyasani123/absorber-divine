@@ -18,15 +18,15 @@ const faqs = [
 export default function Closing() {
   return (
     <>
-      {/* Pelat VIII — tanya jawab ringkas */}
-      <section id="tanya" className="relative overflow-hidden bg-paper py-24 md:py-32">
+      {/* Pelat VII — tanya jawab ringkas */}
+      <section id="tanya" className="relative overflow-hidden bg-paper py-16 md:py-32">
         <div aria-hidden="true" className="laid absolute inset-0" />
 
-        <div className="relative z-10 mx-auto grid max-w-5xl gap-14 px-6 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-20">
+        <div className="relative z-10 mx-auto grid max-w-5xl gap-10 px-6 md:gap-14 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-20">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <p className="mb-6 flex items-center gap-3.5">
               <span aria-hidden="true" className="font-serif text-sm text-brass-ink italic">
-                Pelat VIII
+                Pelat VII
               </span>
               <span aria-hidden="true" className="h-px w-8 bg-brass/50" />
               <span className="sc text-ink-soft">Tanya Jawab</span>
@@ -57,7 +57,7 @@ export default function Closing() {
       <section id="penutup" className="relative overflow-hidden bg-ink text-paper">
         <div aria-hidden="true" className="laid absolute inset-0 opacity-40" />
 
-        <div className="relative z-10 mx-auto max-w-3xl px-6 py-24 text-center md:py-32">
+        <div className="relative z-10 mx-auto max-w-3xl px-6 py-16 text-center md:py-32">
           <p className="sc tendril mb-8 inline-block text-brass-soft">Langkah berikutnya</p>
 
           <h2 className="font-serif text-[2.1rem] leading-[1.12] text-paper md:text-[2.9rem]">

@@ -1,13 +1,14 @@
 import Link from 'next/link';
 import PlateHero from '@/components/PlateHero';
 import { ESAI } from '@/lib/catatan';
+import { meta } from '@/lib/seo';
 
-export const metadata = {
+export const metadata = meta({
   title: 'Catatan Herbarium',
   description:
     'Esai pendek tentang buah yang terus bernapas setelah dipetik, komoditas yang berbagi ruang, dan warna indikator yang menandai waktu.',
-  alternates: { canonical: 'https://absorber-divine.pintuweb.id/jurnal' },
-};
+  path: '/jurnal',
+});
 
 export default function JurnalIndex() {
   return (

@@ -5,8 +5,7 @@ import BungaPotong from '@/components/BungaPotong';
 import PlateHero from '@/components/PlateHero';
 import { ESAI, esaiBySlug, type Blok } from '@/lib/catatan';
 import { pelatBySlug } from '@/lib/herbarium';
-
-const SITE = 'https://absorber-divine.pintuweb.id';
+import { meta, SITE } from '@/lib/seo';
 
 export function generateStaticParams() {
   return ESAI.map((e) => ({ slug: e.slug }));
@@ -16,12 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const e = esaiBySlug(slug);
   if (!e) return {};
-  return {
-    title: `Esai ${e.no} · ${e.judul}`,
-    description: e.ringkas,
-    alternates: { canonical: `${SITE}/jurnal/${e.slug}` },
-    openGraph: { type: 'article' },
-  };
+  return meta({ title: `Esai ${e.no} · ${e.judul}`, description: e.ringkas, path: `/jurnal/${e.slug}`, type: 'article' });
 }
 
 function Isi({ b, pertama }: { b: Blok; pertama: boolean }) {

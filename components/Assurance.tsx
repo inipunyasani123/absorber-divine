@@ -9,7 +9,7 @@ const marks = [
 
 export default function Assurance() {
   return (
-    <section id="jaminan" className="relative overflow-hidden bg-paper py-24 md:py-32">
+    <section id="jaminan" className="relative overflow-hidden bg-paper py-16 md:py-32">
       <div aria-hidden="true" className="laid absolute inset-0" />
 
       <div className="relative z-10 mx-auto max-w-5xl px-6">
@@ -23,20 +23,20 @@ export default function Assurance() {
             </>
           }
           lead="Bahan aktifnya terbungkus material food-grade dan tidak pernah bersentuhan langsung dengan buah. Pernyataan itu tidak berdiri sendiri — empat otoritas sudah memeriksanya."
-          className="mb-14"
+          className="mb-10 md:mb-14"
         />
 
         {/* Cap kuningan */}
-        <div className="mb-12 flex justify-center">
-          <div className="flex h-28 w-28 flex-col items-center justify-center rounded-full border border-brass/45 text-center">
+        <div className="mb-10 flex justify-center md:mb-12">
+          <div className="flex h-24 w-24 flex-col sm:h-28 sm:w-28 items-center justify-center rounded-full border border-brass/45 text-center">
             <span className="font-serif text-[1.65rem] leading-none text-brass-ink italic">IV</span>
-            <span className="sc mt-2 text-brass/80">Otoritas</span>
+            <span className="sc mt-2 text-brass-ink">Otoritas</span>
           </div>
         </div>
 
-        <dl className="grid gap-px border border-ink/12 bg-ink/12 sm:grid-cols-2">
+        <dl className="grid grid-cols-2 gap-px border border-ink/12 bg-ink/12">
           {marks.map((m) => (
-            <div key={m.authority} className="bg-paper px-7 py-7">
+            <div key={m.authority} className="bg-paper px-4 py-5 sm:px-7 sm:py-7">
               <dt className="font-serif text-lg text-ink">{m.authority}</dt>
               <dd className="sc mt-2 text-brass-ink">{m.code}</dd>
               <dd className="mt-2.5 text-sm leading-relaxed text-ink-soft">{m.scope}</dd>

@@ -26,7 +26,7 @@ const steps = [
 
 export default function Ritual() {
   return (
-    <section id="cara-kerja" className="relative overflow-hidden bg-paper py-24 md:py-32">
+    <section id="cara-kerja" className="relative overflow-hidden bg-paper py-16 md:py-32">
       <div aria-hidden="true" className="laid absolute inset-0" />
 
       <div className="relative z-10 mx-auto max-w-5xl px-6">
@@ -40,7 +40,7 @@ export default function Ritual() {
             </>
           }
           lead="Bukan pengawet, bukan pelapis, dan tidak menempel pada buah. Yang dikerjakan sachet ini hanyalah membersihkan udara di sekitarnya."
-          className="mb-16"
+          className="mb-10 md:mb-16"
         />
 
         <ol className="grid gap-x-12 gap-y-12 sm:grid-cols-2">
@@ -60,7 +60,7 @@ export default function Ritual() {
           ))}
         </ol>
 
-        <div className="mt-16 border border-ink/15 bg-paper-deep px-8 py-8 text-center">
+        <div className="mt-10 border border-ink/15 bg-paper-deep px-6 py-7 text-center sm:px-8 sm:py-8 md:mt-16">
           <p className="mx-auto max-w-2xl font-serif text-lg leading-relaxed text-ink italic">
             &ldquo;Reaksi oksidasi bersifat satu arah — gas yang telah terserap tidak akan terlepas
             kembali, meski suhu berubah sepanjang perjalanan.&rdquo;
