@@ -6,19 +6,19 @@ const specimens = [
   {
     no: 'II',
     title: 'Buah tropis ekspor',
-    image: '/images/buahsegar1.webp',
+    image: '/images/spesimen-tropis.webp',
     desc: 'Manggis, pisang, dan mangga yang harus melewati tiga hingga empat minggu pelayaran sebelum sampai ke tangan pembeli.',
   },
   {
     no: 'III',
     title: 'Ritel & meja pajang',
-    image: '/images/buahsegar2.webp',
+    image: '/images/spesimen-ritel.webp',
     desc: 'Rak yang harus tetap tampak menggoda dari pagi sampai toko ditutup, tanpa penyortiran berulang di tengah hari.',
   },
   {
     no: 'IV',
     title: 'Olahan & minuman segar',
-    image: '/images/minuman1.webp',
+    image: '/images/spesimen-olahan.webp',
     desc: 'Produk turunan yang mutunya ditentukan sejak bahan bakunya — buah yang lewat matang tidak dapat diperbaiki di dapur.',
   },
 ];

@@ -25,6 +25,10 @@ Konsep "Divine" dengan bahasa rupa **Plate Botani**, meniru lembar spesimen herb
 - Font: Fraunces, Karla (next/font)
 - SEO: metadata per halaman, Open Graph, JSON-LD, sitemap.xml, dan robots.txt
 
+## Gambar
+
+Pelat buah: cat air USDA Pomological Watercolor Collection (domain publik); pelat anyelir: The Botanical Magazine (1788, domain publik); sachet di hero digambar sendiri (`scripts/ilustrasi/hero-pelat.mjs`). Daftar lengkap: [`public/images/SUMBER.md`](public/images/SUMBER.md).
+
 ## Menjalankan secara lokal
 
 ```bash

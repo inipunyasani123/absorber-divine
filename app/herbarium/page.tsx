@@ -51,6 +51,10 @@ export default function HerbariumIndex() {
               </li>
             ))}
           </ul>
+          <p className="mt-16 text-center text-sm text-ink-soft">
+            Pelat cat air dari <span className="italic">USDA Pomological Watercolor Collection</span>; anyelir dari{' '}
+            <span className="italic">The Botanical Magazine</span> (1788). Keduanya domain publik.
+          </p>
         </div>
       </section>
 

@@ -136,7 +136,7 @@ export const PELAT: Pelat[] = [
     nama: 'Bunga potong',
     latin: 'mis. Dianthus caryophyllus',
     suku: 'Caryophyllaceae',
-    image: null,
+    image: '/images/herbarium/bunga-potong.webp',
     klimakterik: false,
     melepas: 'Rendah',
     peka: 'Sangat tinggi',
