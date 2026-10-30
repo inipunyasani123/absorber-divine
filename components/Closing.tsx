@@ -36,7 +36,7 @@ export default function Closing() {
             </h2>
             <Link
               href="/faq"
-              className="sc mt-8 inline-block border-b border-brass/50 pb-1 text-brass-ink hover:border-brass"
+              className="sc mt-8 inline-block border-b border-brass/50 pb-1 text-brass-ink hover:border-brass sentuh-x"
             >
               Baca semuanya
             </Link>

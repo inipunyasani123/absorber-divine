@@ -24,7 +24,7 @@ export default function NotFound() {
             ['Minta sample', '/kontak'],
           ].map(([label, href]) => (
             <li key={href}>
-              <Link href={href} className="sc inline-block border-b border-brass/50 pb-1 text-brass-ink hover:border-brass">
+              <Link href={href} className="sc inline-block border-b border-brass/50 pb-1 text-brass-ink hover:border-brass sentuh-x">
                 {label}
               </Link>
             </li>

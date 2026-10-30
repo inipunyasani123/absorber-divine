@@ -56,7 +56,7 @@ export default function Hero() {
             </Link>
             <Link
               href="/#kurva"
-              className="group inline-flex items-center justify-center gap-2 text-sm font-semibold text-ink underline-offset-8 transition-colors hover:text-brass"
+              className="group inline-flex items-center justify-center gap-2 text-sm font-semibold text-ink underline-offset-8 transition-colors hover:text-brass min-h-11"
             >
               Lihat kurva kesegaran
               <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">

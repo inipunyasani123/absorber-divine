@@ -147,7 +147,7 @@ export default function KontakPage() {
           <p className="font-serif text-lg text-ink italic">
             Sebagian besar pertanyaan sudah terjawab lengkap di lembar tanya jawab.
           </p>
-          <Link href="/faq" className="sc mx-auto border-b border-brass/50 pb-1 text-brass-ink hover:border-brass">
+          <Link href="/faq" className="sc mx-auto border-b border-brass/50 pb-1 text-brass-ink hover:border-brass sentuh-x">
             Buka Pelat VII
           </Link>
         </div>

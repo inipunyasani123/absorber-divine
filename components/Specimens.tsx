@@ -67,7 +67,7 @@ export default function Specimens() {
         </div>
 
         <p className="mt-10 text-center md:mt-14">
-          <Link href="/herbarium" className="sc inline-block border-b border-brass pb-1 text-ink hover:text-leaf">
+          <Link href="/herbarium" className="sc inline-block border-b border-brass pb-1 text-ink hover:text-leaf sentuh-x">
             Buka herbarium lengkap — delapan pelat komoditas
           </Link>
         </p>

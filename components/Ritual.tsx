@@ -67,7 +67,7 @@ export default function Ritual() {
           </p>
           <Link
             href="/faq"
-            className="sc mt-6 inline-block text-brass-ink underline-offset-8 hover:underline"
+            className="sc mt-6 inline-block text-brass-ink underline-offset-8 hover:underline sentuh"
           >
             Pertanyaan teknis selengkapnya
           </Link>

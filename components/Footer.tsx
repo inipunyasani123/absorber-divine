@@ -45,10 +45,10 @@ export default function Footer() {
 
           <nav aria-label="Navigasi footer">
             <h2 className="sc mb-5 border-b border-paper/20 pb-3 text-paper">Pelat</h2>
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-3 sm:block sm:space-y-3">
+            <ul className="grid grid-cols-2 gap-x-6 gap-y-0 sm:block sm:space-y-0">
               {plates.map((p) => (
                 <li key={p.href}>
-                  <Link href={p.href} className="text-sm transition-colors hover:text-brass-soft">
+                  <Link href={p.href} className="inline-flex min-h-11 items-center inline-flex min-h-11 items-center text-sm transition-colors hover:text-brass-soft">
                     {p.label}
                   </Link>
                 </li>
@@ -76,7 +76,7 @@ export default function Footer() {
             </p>
             <Link
               href="/kontak"
-              className="sc mt-6 inline-block border-b border-brass-soft/60 pb-1 text-brass-soft transition-colors hover:border-brass-soft"
+              className="sc mt-6 inline-block border-b border-brass-soft/60 pb-1 text-brass-soft transition-colors hover:border-brass-soft sentuh-x"
             >
               Isi lembar permintaan
             </Link>
@@ -86,8 +86,8 @@ export default function Footer() {
         <div className="mt-12 flex flex-col gap-4 border-t border-paper/15 pt-7 md:mt-16 sm:flex-row sm:items-center sm:justify-between">
           <p className="sc text-paper/70">© {tahun} EthyleneGuard · PT Dickson Synergy</p>
           <p className="sc flex flex-wrap gap-x-5 gap-y-2 text-paper/70">
-            <Link href="/privacy" className="hover:text-brass-soft">Kebijakan Privasi</Link>
-            <Link href="/terms" className="hover:text-brass-soft">Syarat & Ketentuan</Link>
+            <Link href="/privacy" className="inline-flex min-h-11 items-center hover:text-brass-soft">Kebijakan Privasi</Link>
+            <Link href="/terms" className="inline-flex min-h-11 items-center hover:text-brass-soft">Syarat & Ketentuan</Link>
             <span>Herbarium Edisi {tahun}</span>
           </p>
         </div>

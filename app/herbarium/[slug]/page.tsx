@@ -34,7 +34,7 @@ export default async function PelatPage({ params }: { params: Promise<{ slug: st
     <article className="laid bg-paper pt-32 pb-24 md:pt-40">
       <div className="mx-auto max-w-6xl px-6">
         <nav aria-label="Remah roti" className="sc mb-10 text-center text-ink-soft">
-          <Link href="/herbarium" className="hover:text-leaf">Herbarium</Link> · Pelat {p.no}
+          <Link href="/herbarium" className="hover:text-leaf sentuh">Herbarium</Link> · Pelat {p.no}
         </nav>
 
         <div className="grid items-start gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">

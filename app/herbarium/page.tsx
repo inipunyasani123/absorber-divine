@@ -73,7 +73,7 @@ export default function HerbariumIndex() {
               <span className="text-paper">Non-klimakterik</span> — buah yang tidak lagi matang setelah dipetik. Etilen dari
               luar tetap bisa merusaknya, tetapi masalah utamanya sering kelembapan.
             </p>
-            <Link href="/jurnal/buah-yang-terus-bernapas" className="sc inline-block text-brass-soft hover:text-paper">
+            <Link href="/jurnal/buah-yang-terus-bernapas" className="sc inline-block text-brass-soft hover:text-paper sentuh">
               Esai I — Buah yang terus bernapas →
             </Link>
           </div>
